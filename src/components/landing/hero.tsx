@@ -20,10 +20,9 @@ const icons = {
     tiktok: TiktokIcon,
 }
 
-
 const fadeLeft = { initial: { x: -80, opacity: 1 }, animate: { x: 0, opacity: 1 } };
 const fadeRight = { initial: { x: 80, opacity: 1 }, animate: { x: 0, opacity: 1 } };
-const dropCenter = { initial: { y: 80, opacity: 1 }, animate: { y: 0, opacity: 1 } };
+const upCenter = { initial: { y: 80, opacity: 1 }, animate: { y: 0, opacity: 1 } };
 const tr = { duration: 1.2, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] };
 
 export default function HeroSection() {
@@ -55,9 +54,28 @@ export default function HeroSection() {
                             “Renjie built a fast, responsive website with clean code and great attention to detail. The final result exceeded our expectations.”
                         </blockquote>
                     </div>
+
                     <div className="flex mt-16 lg:mt-0 lg:mb-12 flex-col justify-end h-1/2">
-                        <div className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white">25+</div>
-                        <div className="text-sm text-gray-600 dark:text-gray-300">Client Served</div>
+                        <div className="flex relative -space-x-3">
+                            {[
+                                "/images/profile.png",
+                                "/images/profile2.png",
+                                "/images/profile3.png",
+                                "/images/profile4.png",
+                            ].map((img, index) => (
+                                <Image
+                                    key={index}
+                                    src={img}
+                                    alt={`User ${index + 1}`}
+                                    className="w-10 h-10 rounded-full border-2 border-white object-cover shadow grayscale hover:grayscale-0 transition duration-300"
+                                    width={300}
+                                    height={300}
+                                />
+                            ))}
+                        </div>
+
+                        <span className="text-xl font-semibold"><span className="text-primary dark:text-dark-primary">25+ Reviews</span> (4.9 of 5)</span>
+                        <span className="text-sm text-text-sub dark:text-dark-text-sub">from my valued clients</span>
                     </div>
                 </motion.div>
 
@@ -75,7 +93,7 @@ export default function HeroSection() {
                 {/* ──────── TENGAH ──────── */}
                 <div className="relative flex flex-col h-[666px] justify-between items-center">
                     {/* Heading + badge */}
-                    <div className="flex flex-col items-center mt-22">
+                    <motion.div variants={{ initial: { opacity: 0 }, animate: { opacity: 1 } }} transition={tr} className="flex flex-col items-center mt-22">
                         <span className="text-xs font-medium">
                             Hello There!
                         </span>
@@ -95,21 +113,22 @@ export default function HeroSection() {
                                 />
                             </span>
                         </h1>
-                    </div>
+                    </motion.div>
 
                     {/* Tombol */}
-                    <div className="flex mb-16 lg:mb-26 gap-4 z-10">
+                    <motion.div variants={{ initial: { y: 80, opacity: 0 }, animate: { y: 0, opacity: 1 } }}
+                        transition={{ ...tr, delay: 0.5  }} className="flex mb-16 lg:mb-26 gap-4 z-10">
                         <Button className="lg:h-10 lg:text-lg lg:px-6">
                             My Projects
                         </Button>
                         <Button variant="outline" className="lg:h-10 lg:text-lg lg:px-6">
                             Hire&nbsp;Me
                         </Button>
-                    </div>
+                    </motion.div>
 
                     {/* Lingkaran + Foto absolute, menempel dasar kolom tengah */}
                     <motion.div
-                        variants={dropCenter}
+                        variants={upCenter}
                         transition={{ ...tr, delay: 0.25 }}
                         className="absolute inset-x-0 bottom-0 flex justify-center pointer-events-none"
                     >
