@@ -28,6 +28,7 @@ const tr = { duration: 1.2, ease: [0.16, 1, 0.3, 1] as [number, number, number, 
 export default function HeroSection() {
     return (
         <motion.section
+            id="home"
             initial="initial"
             animate="animate"
             className="relative bg-white dark:bg-[#121212] overflow-hidden"
@@ -94,9 +95,12 @@ export default function HeroSection() {
                 <div className="relative flex flex-col h-[666px] justify-between items-center">
                     {/* Heading + badge */}
                     <motion.div variants={{ initial: { opacity: 0 }, animate: { opacity: 1 } }} transition={tr} className="flex flex-col items-center mt-22">
-                        <span className="text-xs font-medium">
-                            Hello There!
-                        </span>
+                        <div className="flex items-center">
+                            <div className="w-4 h-[2px] mx-2 bg-dark-primary rounded-full" />
+                            <span className="text-sm font-medium">
+                                Hello There!
+                            </span>
+                        </div>
                         <h1 className="text-center text-3xl lg:text-5xl font-bold">
                             <span className="block">
                                 I’m Renjie,
@@ -117,7 +121,7 @@ export default function HeroSection() {
 
                     {/* Tombol */}
                     <motion.div variants={{ initial: { y: 80, opacity: 0 }, animate: { y: 0, opacity: 1 } }}
-                        transition={{ ...tr, delay: 0.5  }} className="flex mb-16 lg:mb-26 gap-4 z-10">
+                        transition={{ ...tr, delay: 0.5 }} className="flex mb-16 lg:mb-26 gap-4 z-10">
                         <Button className="lg:h-10 lg:text-lg lg:px-6">
                             My Projects
                         </Button>
