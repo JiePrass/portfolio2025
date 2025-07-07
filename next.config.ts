@@ -5,7 +5,6 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   webpack(config) {
     const fileLoaderRule = config.module.rules.find(
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (rule: any): rule is RuleSetRule =>
         typeof rule === "object" &&
         rule !== null &&
