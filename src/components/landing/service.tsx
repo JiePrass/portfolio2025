@@ -32,7 +32,7 @@ export default function ServiceSection() {
     return (
         <section
             id="services"
-            className="bg-dark-accent-100 p-6 lg:p-16 text-dark-text w-full rounded-4xl"
+            className="bg-dark-accent-100 p-6 lg:p-16 text-dark-text w-full md:rounded-4xl"
         >
             {/* Heading */}
             <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center border-b border-dark-text-sub/60 pb-6 mb-10 gap-4">

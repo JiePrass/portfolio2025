@@ -1,7 +1,11 @@
 import About from "@/components/landing/about";
+import Award from "@/components/landing/award";
+import FAQ from "@/components/landing/faq";
 import Hero from "@/components/landing/hero";
+import Projects from "@/components/landing/projects";
 import Service from "@/components/landing/service";
 import TechStack from "@/components/landing/techStack";
+import CTA from "@/components/landing/cta";
 
 export default function Home() {
   return(
@@ -10,6 +14,10 @@ export default function Home() {
       <Service />
       <About />
       <TechStack />
+      <Projects />
+      <Award />
+      <FAQ />
+      <CTA />
     </main>
   )
 }

@@ -101,7 +101,7 @@ export default function Header() {
             <motion.header
                 animate={controls}
                 transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm px-6 lg:px-0"
+                className="fixed top-0 left-0 right-0 z-50 px-6 lg:px-0"
             >
                 <div className="container mx-auto">
                     <div className="flex justify-between items-center bg-card dark:bg-dark-card rounded-full mt-4 py-2 px-6 lg:px-8 shadow-lg">

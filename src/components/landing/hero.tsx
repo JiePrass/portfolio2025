@@ -68,15 +68,15 @@ export default function HeroSection() {
                                     key={index}
                                     src={img}
                                     alt={`User ${index + 1}`}
-                                    className="w-10 h-10 rounded-full border-2 border-white object-cover shadow grayscale hover:grayscale-0 transition duration-300"
+                                    className="w-8 h-8 md:w-10 md:h-10 rounded-full border-2 border-white object-cover shadow grayscale hover:grayscale-0 transition duration-300"
                                     width={300}
                                     height={300}
                                 />
                             ))}
                         </div>
 
-                        <span className="text-xl font-semibold"><span className="text-primary dark:text-dark-primary">25+ Reviews</span> (4.9 of 5)</span>
-                        <span className="text-sm text-text-sub dark:text-dark-text-sub">from my valued clients</span>
+                        <span className="text-sm md:text-xl font-semibold text-primary dark:text-dark-primary">25+ Reviews <span className="text-text dark:text-dark-text hidden md:inline">(4.9 of 5)</span></span>
+                        <span className="text-xs md:text-sm text-text-sub dark:text-dark-text-sub max-w-24 md:max-w-xl">from my valued clients</span>
                     </div>
                 </motion.div>
 
@@ -125,7 +125,7 @@ export default function HeroSection() {
                         <Button className="lg:h-10 lg:text-lg lg:px-6">
                             My Projects
                         </Button>
-                        <Button variant="outline" className="lg:h-10 lg:text-lg lg:px-6">
+                        <Button variant="secondary" className="lg:h-10 lg:text-lg lg:px-6">
                             Hire&nbsp;Me
                         </Button>
                     </motion.div>
