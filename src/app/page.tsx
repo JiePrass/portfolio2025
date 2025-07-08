@@ -5,10 +5,9 @@ import Hero from "@/components/landing/hero";
 import Projects from "@/components/landing/projects";
 import Service from "@/components/landing/service";
 import TechStack from "@/components/landing/techStack";
-import CTA from "@/components/landing/cta";
 
 export default function Home() {
-  return(
+  return (
     <main className="bg-background dark:bg-dark-background text-text dark:text-dark-text">
       <Hero />
       <Service />
@@ -17,7 +16,6 @@ export default function Home() {
       <Projects />
       <Award />
       <FAQ />
-      <CTA />
     </main>
   )
 }

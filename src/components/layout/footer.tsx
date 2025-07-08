@@ -4,17 +4,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUp } from "lucide-react";
 
-import FacebookIcon from "@/icons/facebook.svg"
-import InstagramIcon from "@/icons/instagram.svg"
-import TwitterIcon from "@/icons/twitter.svg"
-import YouTubeIcon from "@/icons/youtube.svg"
-import TiktokIcon from "@/icons/tiktok.svg"
+import FacebookIcon from "@/assets/icons/facebook.svg"
+import InstagramIcon from "@/assets/icons/instagram.svg"
+import TwitterIcon from "@/assets/icons/twitter.svg"
+import YouTubeIcon from "@/assets/icons/youtube.svg"
+import TiktokIcon from "@/assets/icons/tiktok.svg"
 
 const navItems = [
-    { href: "/", label: "Beranda" },
-    { href: "/paket", label: "Paket Wisata" },
-    { href: "/artikel", label: "Artikel" },
-    { href: "/kontak", label: "Kontak" },
+    { id: "home", label: "Home"},
+    { id: "services", label: "Services" },
+    { id: "about", label: "About"},
+    { id: "projects", label: "Projects" },
+    { id: "resume", label: "Resume" },
 ]
 
 const icons = {
@@ -34,7 +35,7 @@ export default function Footer() {
 
     return (
         <footer
-            className="text-foreground py-8 overflow-hidden"
+            className="bg-accent-200 dark:bg-dark-accent-200 text-text dark:text-dark-text py-8 overflow-hidden"
         >
             <div
                 className="container mx-auto px-6 md:px-0 flex flex-col md:flex-row md:justify-between md:items-center gap-6"
@@ -48,15 +49,15 @@ export default function Footer() {
                         height={300}
                         className="object-contain w-auto h-8 md:w-8 md:h-auto"
                     />
-                    <span className="text-xl font-bold">Highfive Management</span>
+                    <span className="text-xl font-bold">JiePrass</span>
                 </div>
 
                 <div className="hidden md:flex gap-4 flex-wrap">
                     {navItems.map((item, key) => (
                         <Link
                             key={key}
-                            href={item.href}
-                            className="px-4 py-1 border rounded-full whitespace-nowrap hover:bg-white hover:text-black transition-colors"
+                            href={`#${item.id}`}
+                            className="px-4 py-1 border rounded-full whitespace-nowrap hover:bg-card dark:hover:bg-dark-card transition-colors"
                         >
                             {item.label}
                         </Link>
@@ -69,14 +70,14 @@ export default function Footer() {
             >
                 <div className="flex flex-col justify-between">
                     <h1 className="text-4xl md:text-5xl font-semibold">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Driven by vision, built with passion, crafted with intention.
                     </h1>
 
                     <div className="flex md:hidden flex-wrap mt-8 gap-4">
                         {navItems.map((item, key) => (
                             <Link
                                 key={key}
-                                href={item.href}
+                                href={`#${item.id}`}
                                 className="px-4 py-1 border rounded-full whitespace-nowrap hover:bg-white hover:text-black transition-colors"
                             >
                                 {item.label}
@@ -84,33 +85,32 @@ export default function Footer() {
                         ))}
                     </div>
 
-                    <p className="text-xs text-[#595A5B] hidden md:flex">
-                        &copy; {currentYear} Highfive Management seluruh hak cipta dilindungi
+                    <p className="text-xs text-text-sub dark:text-dark-text-sub hidden md:flex">
+                        &copy; {currentYear} JiePrass all right reserved
                     </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm">
                     <div className="flex flex-col gap-2 text-lg">
-                        <h2 className="text-[#595A5B] font-semibold">Lokasi</h2>
-                        <p>Jl. Raya Tajur, Kp. Buntar, Kel. Muara Sari, Kec. Bogor Selatan</p>
+                        <h2 className="text-text-sub dark:text-dark-text-sub font-semibold">Location</h2>
+                        <p>Jl. Raya Puncak, Gadog No.619, Pandansari, Ciawi District, Bogor Regency</p>
                     </div>
                     <div className="flex flex-col gap-2 text-lg">
-                        <h2 className="text-[#595A5B] font-semibold">Email</h2>
-                        <p>highfive@gmail.com</p>
+                        <h2 className="text-text-sub dark:text-dark-text-sub font-semibold">Email</h2>
+                        <p>renjieprass@gmail.com</p>
                     </div>
                     <div className="flex flex-col gap-2 text-lg">
-                        <h2 className="text-[#595A5B] font-semibold">Kontak</h2>
-                        <p>+62 838 7963 0647</p>
+                        <h2 className="text-text-sub dark:text-dark-text-sub font-semibold">Contact</h2>
                         <p>+62 857 7025 3105</p>
                     </div>
                     <div className="flex flex-col gap-2 text-lg">
-                        <h2 className="text-[#595A5B] font-semibold">Media Sosial</h2>
+                        <h2 className="text-text-sub dark:text-dark-text-sub font-semibold">Social Media</h2>
                         <div className="flex gap-2">
                             {["facebook", "youtube", "instagram", "twitter", "tiktok"].map((platform) => {
                                 const Icon = icons[platform as keyof typeof icons]
                                 return (
                                     <Link key={platform} href={`https://${platform}.com`} target="_blank" rel="noopener noreferrer">
-                                        <Icon className="text-foreground hover:opacity-80 transition inline-block overflow-visible" />
+                                        <Icon className="text-text dark:text-dark-text w-8 h-8 hover:opacity-80 transition" />
                                     </Link>
                                 )
                             })}
@@ -121,8 +121,8 @@ export default function Footer() {
 
             <div className="container mx-auto px-4 md:px-0">
                 <div className="flex justify-center items-center">
-                    <h1 className="text-[90px] md:text-[323px] cursor-default text-neutral-800 mb-8 md:mb-16 leading-none font-semibold text-center">
-                        Highfive
+                    <h1 className="text-[90px] md:text-[363px] cursor-default text-text dark:text-dark-text mb-6 leading-none font-semibold text-center">
+                        JiePrass
                     </h1>
                 </div>
 
@@ -131,7 +131,7 @@ export default function Footer() {
                     className="w-full rounded-xl border border-gray-700 px-4 md:px-8 py-4 flex items-center justify-between gap-4 bg-neutral-800 text-sm hover:bg-neutral-700 transition cursor-pointer"
                 >
                     <span className="text-left text-white">
-                        Kembali Ke<br /> Halaman Paling Atas
+                        Back To<br /> Top of Pages
                     </span>
                     <div className="bg-white text-black rounded-full p-2">
                         <ArrowUp className="w-4 h-4" />
@@ -140,7 +140,7 @@ export default function Footer() {
             </div>
 
             <p className="text-xs text-center text-subtle md:hidden mt-4">
-                &copy; {currentYear} Highfive Management seluruh hak cipta dilindungi
+                &copy; {currentYear} JiePrass all right reserved
             </p>
         </footer>
     );

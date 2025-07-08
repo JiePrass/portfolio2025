@@ -76,7 +76,7 @@ export default function Projects() {
                             }`}
                     >
                         {/* Image */}
-                        <div className="w-full lg:w-1/2 relative rounded-3xl overflow-hidden shadow-lg border border-gray-200">
+                        <div className="w-full lg:w-1/2 relative rounded-3xl overflow-hidden shadow-lg border">
                             <Image
                                 src={proj.image}
                                 alt={`${proj.title} preview`}
@@ -98,7 +98,7 @@ export default function Projects() {
                             </p>
 
                             {/* Info table */}
-                            <div className="border border-gray-200 rounded-2xl overflow-hidden mb-8">
+                            <div className="border rounded-2xl overflow-hidden mb-8">
                                 <div className="grid grid-cols-2 text-sm">
                                     <span className="py-3 px-4 font-medium">Client</span>
                                     <span className="py-3 px-4 text-right">{proj.client}</span>

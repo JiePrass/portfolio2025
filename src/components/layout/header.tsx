@@ -13,9 +13,23 @@ import {
     Info,
     Folder,
     FileText,
-    Phone
+    Phone,
+    Mail,
 } from "lucide-react";
 import DarkModeToggle from "../shared/DarkmodeToggle";
+import FacebookIcon from "@/assets/icons/facebook.svg"
+import InstagramIcon from "@/assets/icons/instagram.svg"
+import TwitterIcon from "@/assets/icons/twitter.svg"
+import YouTubeIcon from "@/assets/icons/youtube.svg"
+import TiktokIcon from "@/assets/icons/tiktok.svg"
+
+const icons = {
+    facebook: FacebookIcon,
+    instagram: InstagramIcon,
+    twitter: TwitterIcon,
+    youtube: YouTubeIcon,
+    tiktok: TiktokIcon,
+}
 
 // Navigasi + ikon khusus sidebar
 const navItems = [
@@ -24,7 +38,6 @@ const navItems = [
     { id: "about", label: "About", icon: Info },
     { id: "projects", label: "Projects", icon: Folder },
     { id: "resume", label: "Resume", icon: FileText },
-    { id: "contact", label: "Contact", icon: Phone },
 ] as const;
 
 type NavItem = (typeof navItems)[number];
@@ -178,26 +191,67 @@ export default function Header() {
                                 </button>
                             </div>
 
-                            <span className="text-text dark:text-dark-text text-sm font-semibold mb-3">Menu</span>
+                            <div className="flex flex-col gap-6">
+                                <div className="flex flex-col gap-3">
+                                    <span className="text-text dark:text-dark-text text-sm font-semibold">Menu</span>
+                                    {/* Nav links with icons */}
+                                    <nav className="flex flex-col gap-4">
+                                        {navItems.map(({ id, label, icon: Icon }: NavItem) => (
+                                            <Link
+                                                key={id}
+                                                href={`#${id}`}
+                                                className={clsx(linkClass(id), "flex items-center gap-3")}
+                                                onClick={closeMenu}
+                                            >
+                                                <Icon size={18} className="shrink-0" />
+                                                {label}
+                                            </Link>
+                                        ))}
+                                    </nav>
+                                </div>
 
-                            {/* Nav links with icons */}
-                            <nav className="flex flex-col gap-4">
-                                {navItems.map(({ id, label, icon: Icon }: NavItem) => (
-                                    <Link
-                                        key={id}
-                                        href={`#${id}`}
-                                        className={clsx(linkClass(id), "flex items-center gap-3")}
-                                        onClick={closeMenu}
-                                    >
-                                        <Icon size={18} className="shrink-0" />
-                                        {label}
-                                    </Link>
-                                ))}
-                            </nav>
+                                <div className="flex flex-col gap-3">
+                                    <span className="text-text dark:text-dark-text text-sm font-semibold">Contact</span>
+                                    <div className="flex flex-col gap-4 text-text-sub dark:text-dark-text-sub">
+                                        <Link
+                                            className="flex items-center gap-3"
+                                            href="mailto:renjieprass@gmail.com"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <Mail size={18} className="shrink-0" />
+                                            renjieprass@gmail.com
+                                        </Link>
+                                        <Link
+                                            className="flex items-center gap-3"
+                                            href="https://wa.me/6285770253105"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <Phone size={18} className="shrink-0" />
+                                            +62 857 7025 3105
+                                        </Link>
+                                    </div>
+                                </div>
+
+                                <div className="flex flex-col gap-3">
+                                    <span className="text-text dark:text-dark-text text-sm font-semibold">Social Media</span>
+                                    <div className="flex gap-2">
+                                        {["facebook", "youtube", "instagram", "twitter", "tiktok"].map((platform) => {
+                                            const Icon = icons[platform as keyof typeof icons]
+                                            return (
+                                                <Link key={platform} href={`https://${platform}.com`} target="_blank" rel="noopener noreferrer">
+                                                    <Icon className="text-text dark:text-dark-text w-8 h-8 hover:opacity-80 transition" />
+                                                </Link>
+                                            )
+                                        })}
+                                    </div>
+                                </div>
+                            </div>
                         </motion.aside>
                     </motion.div>
                 )}
-            </AnimatePresence>
+            </AnimatePresence >
         </>
     );
 }

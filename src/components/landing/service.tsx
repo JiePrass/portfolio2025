@@ -7,26 +7,24 @@ import { ServiceCard, ServiceItem } from "../shared/ServiceCard";
 const services: ServiceItem[] = [
     {
         id: 1,
-        title: "Web Design",
+        title: "Web Development",
         image: "/images/temp.png",
-        description:
-            "UI/UX design responsif, berfokus pada konversi & branding yang kuat.",
+        description: "Building responsive, fast, and optimized websites for all devices.",
     },
     {
         id: 2,
-        title: "Web Development",
+        title: "Fullstack Development",
         image: "/images/temp.png",
-        description:
-            "Pengembangan full-stack modern (Next.js, NestJS, Prisma, dsb.).",
+        description: "Developing high-performance applications with scalable architecture.",
     },
     {
         id: 3,
-        title: "SEO Optimization",
+        title: "UI/UX Design",
         image: "/images/temp.png",
-        description:
-            "Audit teknis, optimasi konten, & strategi keyword berbasis data.",
+        description: "Designing visually appealing interfaces with a focus on intuitive user experiences.",
     },
 ];
+
 
 export default function ServiceSection() {
     return (
@@ -40,8 +38,7 @@ export default function ServiceSection() {
                     <span className="text-dark-primary">Services&nbsp;</span>I Provide
                 </h2>
                 <p className="text-dark-text-sub max-w-lg lg:text-end">
-                    Solusi digital end-to-end: dari riset, desain, implementasi, hingga
-                    optimasi berkelanjutan.
+                    End-to-end digital solutions: from research, design, implementation, to continuous optimization.
                 </p>
             </div>
 
