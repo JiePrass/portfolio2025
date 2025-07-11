@@ -8,21 +8,21 @@ const services: ServiceItem[] = [
     {
         id: 1,
         title: "Web Development",
-        image: "/images/temp.png",
+        image: "/images/webdevservice.png",
         description: "Building responsive, fast, and optimized websites for all devices.",
     },
     {
         id: 2,
-        title: "Fullstack Development",
-        image: "/images/temp.png",
-        description: "Developing high-performance applications with scalable architecture.",
+        title: "UI/UX Design",
+        image: "/images/uiuxservice.png",
+        description: "Designing visually appealing interfaces with a focus on intuitive user experiences.",
     },
     {
         id: 3,
-        title: "UI/UX Design",
-        image: "/images/temp.png",
-        description: "Designing visually appealing interfaces with a focus on intuitive user experiences.",
-    },
+        title: "Company Profile",
+        image: "/images/cpservice.png",
+        description: "Developing professional company profile websites that showcase your brand, values, and services effectively.",
+    }
 ];
 
 

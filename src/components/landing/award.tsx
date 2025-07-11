@@ -7,36 +7,31 @@ import "swiper/css"
 
 const awards = [
     {
-        title: "Juara 1 Hackathon 2024",
-        description: "Memenangkan kompetisi nasional dengan solusi web inovatif.",
-        image: "/images/temp.png",
+        title: "Top 3 Web Development SEFEST 2025",
+        description: "Achieved top 3 in SEFEST 2025 for excellence in web development and innovation.",
+        image: "/images/sertif-sefest.png",
     },
     {
-        title: "Best Design Award",
-        description: "Penghargaan atas UI/UX terbaik di kompetisi desain digital.",
-        image: "/images/temp.png",
+        title: "Top 3 UI/UX Design Crowd IT 2025",
+        description: "Recognized among the top 3 participants for outstanding UI/UX design in Crowd IT 2025.",
+        image: "/images/sertif-crowdit.jpg",
     },
     {
-        title: "Top 10 Finalist",
-        description: "Masuk 10 besar peserta terbaik dalam lomba pemrograman.",
-        image: "/images/temp.png",
+        title: "Participant UI/UX Design Smart IT Competition 2025",
+        description: "Recognized for UI/UX excellence in a national digital design competition.",
+        image: "/images/sertif-uns.jpg",
     },
     {
-        title: "Top 10 Finalist",
-        description: "Masuk 10 besar peserta terbaik dalam lomba pemrograman.",
-        image: "/images/temp.png",
+        title: "Participant IT Knowledge 2025",
+        description: "Participated in IT Knowledge 2025 to enhance technical insights and professional growth.",
+        image: "/images/sertif-itk.png",
     },
     {
-        title: "Top 10 Finalist",
-        description: "Masuk 10 besar peserta terbaik dalam lomba pemrograman.",
-        image: "/images/temp.png",
+        title: "Top 10 UI/UX Design LP3I Depok School Competition 2025",
+        description: "Ranked in the top 10 for UI/UX design in a regional competition held by LP3I Depok.",
+        image: "/images/sertif-ldsc.png",
     },
-    {
-        title: "Top 10 Finalist",
-        description: "Masuk 10 besar peserta terbaik dalam lomba pemrograman.",
-        image: "/images/temp.png",
-    },
-]
+];
 
 export default function Award() {
     return (
@@ -69,13 +64,14 @@ export default function Award() {
                 >
                     {awards.map((award, idx) => (
                         <SwiperSlide key={idx}>
-                            <div className="bg-white dark:bg-dark-accent-200 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                                <div className="relative w-full h-48">
-                                    <Image src={award.image} alt={award.title} fill className="object-cover" />
+                            <div className="bg-white dark:bg-dark-accent-100 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 h-[333px] flex flex-col">
+                                <div className="relative w-full mt-4 h-48">
+                                    <Image src={award.image} alt={award.title} fill className="object-contain" />
                                 </div>
-                                <div className="p-4">
+
+                                <div className="p-4 flex-1 flex flex-col">
                                     <h3 className="font-semibold text-lg">{award.title}</h3>
-                                    <p className="text-sm text-dark-text-sub dark:text-dark-text-sub mt-1">
+                                    <p className="text-sm text-dark-text-sub dark:text-dark-text-sub mt-1 line-clamp-3">
                                         {award.description}
                                     </p>
                                 </div>
