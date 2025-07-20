@@ -24,7 +24,7 @@ const projects: Project[] = [
             "A product catalog website built for local batik artisans, featuring an online showcase, cart system, and admin dashboard using Vite and React.",
         image: "/images/temp.png",
         client: "UMKM Batik Nusantara",
-        duration: "2 Months",
+        duration: "2 Weeks",
         country: "Indonesia",
         url: "/images/temp.png",
     },
@@ -36,7 +36,7 @@ const projects: Project[] = [
             "A tourism platform with SEO-optimized landing pages, dynamic blog content, and a simple booking flow built using Next.js and Contentful CMS.",
         image: "/images/temp.png",
         client: "Highfive Travel",
-        duration: "3 Months",
+        duration: "1 Months",
         country: "Indonesia",
         url: "/images/temp.png",
     },
@@ -47,8 +47,8 @@ const projects: Project[] = [
         description:
             "A lightweight productivity web app featuring to-do lists, Pomodoro-style timers, and weekly progress tracking, built with Figma.",
         image: "/images/temp.png",
-        client: "Internal Project",
-        duration: "1.5 Months",
+        client: "Crowd IT 2025 Competition",
+        duration: "3 Weeks",
         country: "Indonesia",
         url: "/images/temp.png",
     },
@@ -63,8 +63,7 @@ export default function Projects() {
                 <span className="text-sm font-medium">Latest Projects</span>
             </div>
             <h2 className="text-3xl lg:text-5xl font-bold mb-12">
-                Selected Works&nbsp;
-                <span className="text-primary">that solve real problems.</span>
+                Selected Projects <span className="text-primary">crafted with precision and passion</span>
             </h2>
 
             {/* ─── Content ─── */}

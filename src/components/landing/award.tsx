@@ -14,12 +14,17 @@ const awards = [
     {
         title: "Top 3 UI/UX Design Crowd IT 2025",
         description: "Recognized among the top 3 participants for outstanding UI/UX design in Crowd IT 2025.",
-        image: "/images/sertif-crowdit.jpg",
+        image: "/images/sertif-crowdit.png",
     },
     {
         title: "Participant UI/UX Design Smart IT Competition 2025",
         description: "Recognized for UI/UX excellence in a national digital design competition.",
         image: "/images/sertif-uns.jpg",
+    },
+    {
+        title: "Participant Crowd IT 2025 Seminar",
+        description: "Participated in Crowd IT 2025 to broaden knowledge and understanding of Design Thinking",
+        image: "/images/sertif-seminar-crowdit.png"
     },
     {
         title: "Participant IT Knowledge 2025",
@@ -43,7 +48,7 @@ export default function Award() {
                     <span className="text-sm font-medium">Achievement</span>
                 </div>
                 <h2 className="text-3xl lg:text-5xl font-bold text-center">
-                    Penghargaan &amp; Prestasi
+                    Award &amp; Achievement
                 </h2>
             </div>
 
