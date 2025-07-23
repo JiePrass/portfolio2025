@@ -22,23 +22,23 @@ const projects: Project[] = [
         highlight: "Batik Small Business Web Platform",
         description:
             "A product catalog website built for local batik artisans, featuring an online showcase, cart system, and admin dashboard using Vite and React.",
-        image: "/images/temp.png",
-        client: "UMKM Batik Nusantara",
+        image: "/images/batikan.png",
+        client: "ITS DAY Web Design Competition 2025",
         duration: "2 Weeks",
         country: "Indonesia",
-        url: "/images/temp.png",
+        url: "https://batikan.jieprass.my.id/",
     },
     {
         id: 2,
-        title: "Highfive",
+        title: "Station Adventure Puncak",
         highlight: "Tourism Website with Optimized SEO",
         description:
             "A tourism platform with SEO-optimized landing pages, dynamic blog content, and a simple booking flow built using Next.js and Contentful CMS.",
-        image: "/images/temp.png",
-        client: "Highfive Travel",
+        image: "/images/cpservice.png",
+        client: "Station Adventure Puncak",
         duration: "1 Months",
         country: "Indonesia",
-        url: "/images/temp.png",
+        url: "https://station-adventure-puncak.vercel.app/",
     },
     {
         id: 3,
@@ -46,11 +46,11 @@ const projects: Project[] = [
         highlight: "Web Design for Productivity Boost",
         description:
             "A lightweight productivity web app featuring to-do lists, Pomodoro-style timers, and weekly progress tracking, built with Figma.",
-        image: "/images/temp.png",
+        image: "/images/webdevservice.png",
         client: "Crowd IT 2025 Competition",
         duration: "3 Weeks",
         country: "Indonesia",
-        url: "/images/temp.png",
+        url: "https://www.figma.com/design/lADhH67cm7QbLBGtdmxOCR/FOURTIVITY?node-id=1-3&t=M99sIv5onbcRGLPx-1",
     },
 ];
 
@@ -97,20 +97,20 @@ export default function Projects() {
                             </p>
 
                             {/* Info table */}
-                            <div className=" rounded-2xl overflow-hidden mb-8">
+                            <div className="rounded-2xl overflow-hidden mb-8">
                                 <div className="grid grid-cols-2 text-sm">
-                                    <span className="py-3 px-4 font-medium">Client</span>
-                                    <span className="py-3 px-4 text-right">{proj.client}</span>
+                                    <span className="py-3 font-medium">Client</span>
+                                    <span className="py-3 text-right">{proj.client}</span>
 
-                                    <span className="py-3 px-4 font-medium">
+                                    <span className="py-3 font-medium">
                                         Duration
                                     </span>
-                                    <span className="py-3 px-4 text-right">
+                                    <span className="py-3 text-right">
                                         {proj.duration}
                                     </span>
 
-                                    <span className="py-3 px-4 font-medium">Country</span>
-                                    <span className="py-3 px-4 text-right">
+                                    <span className="py-3 font-medium">Country</span>
+                                    <span className="py-3 text-right">
                                         {proj.country}
                                     </span>
                                 </div>

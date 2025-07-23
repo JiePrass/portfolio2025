@@ -15,7 +15,6 @@ import { JSX } from "react";
 
 interface Skill {
     name: string;
-    level: number;
     description: string;
     icon: JSX.Element;
 }
@@ -24,42 +23,36 @@ interface Skill {
 const skills: Skill[] = [
     {
         name: "Next.js",
-        level: 88,
         description:
             "Full‑stack React framework with server components, file‑based routing, and excellent DX.",
         icon: <RiNextjsFill className="w-12 h-12 mb-2" />,
     },
     {
         name: "React",
-        level: 96,
         description:
             "Core library for building performant UIs with hooks, suspense, and concurrent features.",
         icon: <FaReact className="w-12 h-12 mb-2 text-[#61DAFB]" />,
     },
     {
         name: "Express.js",
-        level: 90,
         description:
             "Minimal Node.js backend framework perfect for REST APIs and micro‑services.",
         icon: <SiExpress className="w-12 h-12 mb-2" />,
     },
     {
         name: "Laravel",
-        level: 84,
         description:
             "Batteries‑included PHP framework for rapid, secure web‑app development.",
         icon: <FaLaravel className="w-12 h-12 mb-2 text-[#FF2D20]" />,
     },
     {
         name: "TypeScript",
-        level: 93,
         description:
             "Typed superset of JavaScript enabling safer, scalable codebases.",
         icon: <SiTypescript className="w-12 h-12 mb-2 text-[#3178C6]" />,
     },
     {
         name: "Figma",
-        level: 87,
         description:
             "Collaborative design tool for high‑fidelity UI/UX prototypes and hand‑off.",
         icon: <FigmaIcon className="w-12 h-12 mb-2" />,
@@ -83,13 +76,12 @@ export default function TechStack() {
                 {/* Skills grid */}
                 <TooltipProvider>
                     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 w-full max-w-[1050px]">
-                        {skills.map(({ name, level, description, icon }) => (
+                        {skills.map(({ name, description, icon }) => (
                             <Tooltip key={name}>
                                 <TooltipTrigger asChild>
                                     <Card className="group flex flex-col border-none items-center transition-all hover:shadow-xl hover:-translate-y-1 bg-card dark:bg-dark-card rounded-2xl">
                                         <CardContent className="flex flex-col items-center justify-center p-0">
                                             {icon}
-                                            <span className="text-xl font-semibold leading-none">{level}%</span>
                                             <span className="mt-1 text-xs font-medium text-text-sub dark:text-dark-text-sub">
                                                 {name}
                                             </span>

@@ -141,7 +141,7 @@ export default function HeroSection() {
                             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-[500px] h-[500px] lg:w-[600px] lg:h-[600px] z-0 bg-primary rounded-full" />
                             {/* foto */}
                             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[400px] h-[400px] lg:w-[480px] lg:h-[480px]">
-                                <Image src="/images/portfolio.png" alt="Renjie" fill className="object-cover" priority />
+                                <Image src="/images/portfolio.png" alt="Renjie" fill className="object-cover" priority loading="eager" />
                             </div>
                         </div>
                     </motion.div>
