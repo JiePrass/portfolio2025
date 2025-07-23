@@ -24,7 +24,7 @@ const projects: Project[] = [
             "A product catalog website built for local batik artisans, featuring an online showcase, cart system, and admin dashboard using Vite and React.",
         image: "/images/batikan.png",
         client: "ITS DAY Web Design Competition 2025",
-        duration: "2 Weeks",
+        duration: "4 Days",
         country: "Indonesia",
         url: "https://batikan.jieprass.my.id/",
     },
