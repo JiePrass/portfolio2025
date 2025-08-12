@@ -92,7 +92,7 @@ export default function SplashScreen({ onFinish }: { onFinish?: () => void }) {
         <AnimatePresence>
             {!exiting && (
                 <motion.div
-                    className={`fixed inset-0 flex items-center justify-center z-50 cursor-pointer ${step === 'tap' ? 'bg-primary' : 'bg-white'
+                    className={`fixed inset-0 flex items-center justify-center z-50 cursor-pointer ${step === 'tap' ? 'bg-primary dark:bg-dark-primary' : 'bg-white dark:bg-dark-background'
                         }`}
                     initial={{ y: 0 }}
                     exit={{ y: '-100%' }}
@@ -112,13 +112,13 @@ export default function SplashScreen({ onFinish }: { onFinish?: () => void }) {
                             }}
                         >
                             <motion.div
-                                className="absolute w-10 h-10 bg-primary rounded-full"
+                                className="absolute w-10 h-10 bg-primary dark:bg-dark-primary rounded-full"
                                 style={{ left: 0, top: 0 }}
                                 initial={{ opacity: 0, scale: 0.6 }}
                                 animate={c1Ctr}
                             />
                             <motion.div
-                                className="absolute w-10 h-10 bg-primary rounded-full"
+                                className="absolute w-10 h-10 bg-primary dark:bg-dark-primary rounded-full"
                                 style={{ left: 40, top: 0 }}
                                 initial={{ opacity: 0, scale: 0.6 }}
                                 animate={c2Ctr}
@@ -129,7 +129,7 @@ export default function SplashScreen({ onFinish }: { onFinish?: () => void }) {
                     {/* EXPAND CENTER */}
                     {step === 'expand' && (
                         <motion.div
-                            className="absolute bg-primary rounded-full"
+                            className="absolute bg-primary dark:bg-dark-primary rounded-full"
                             style={{ width: 40, height: 40 }}
                             initial={{ scale: 0 }}
                             animate={{ scale: 100 }}
