@@ -36,7 +36,7 @@ export default function SplashScreen({ onFinish }: { onFinish?: () => void }) {
             ]);
 
             // ORBIT: 3× 180°, bergantian opacity
-            for (let i = 0; i < 3; i++) {
+            for (let i = 0; i < 6; i++) {
                 // semuanya pudar dulu sebelum mulai putar
                 await Promise.all([
                     c1Ctr.start({ opacity: 0.4, transition: { duration: 0.2 } }),

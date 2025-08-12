@@ -39,19 +39,19 @@ export default function FAQ() {
     const toggle = (i: number) => setActive(prev => (prev === i ? null : i));
     const sendMail = () =>
         window.open(
-            `mailto:hello@yourportfolio.dev?subject=Project%20Enquiry&body=${encodeURIComponent(
+            `mailto:renjieprass@gmail.com?subject=Project%20Enquiry&body=${encodeURIComponent(
                 message
             )}`,
             "_blank"
         );
     const sendWhatsApp = () =>
         window.open(
-            `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`,
+            `https://wa.me/6285770253105?text=${encodeURIComponent(message)}`,
             "_blank"
         );
 
     return (
-        <section className="container mx-auto px-6 py-12 lg:py-20">
+        <section className="container mx-auto px-6 py-12 lg:py-20" id="faq">
             {/* label + heading */}
             <div className="flex items-center mb-3 justify-center">
                 <span className="w-4 h-[2px] bg-dark-primary rounded-full mr-2" />

@@ -84,7 +84,7 @@ export default function HeroSection() {
                     {["facebook", "youtube", "instagram", "twitter", "tiktok"].map((platform) => {
                         const Icon = icons[platform as keyof typeof icons]
                         return (
-                            <Link key={platform} href={`https://${platform}.com`} target="_blank" rel="noopener noreferrer">
+                            <Link key={platform} href={`https://${platform}.com/jie.env`} target="_blank" rel="noopener noreferrer">
                                 <Icon className="text-text dark:text-dark-text w-8 h-8 hover:opacity-80 transition" />
                             </Link>
                         )
@@ -123,10 +123,14 @@ export default function HeroSection() {
                     <motion.div variants={{ initial: { y: 80, opacity: 0 }, animate: { y: 0, opacity: 1 } }}
                         transition={{ ...tr, delay: 0.5 }} className="flex mb-16 lg:mb-26 gap-4 z-10">
                         <Button className="lg:h-10 lg:text-lg lg:px-6">
-                            My Projects
+                            <Link href="#projects">
+                                My Projects
+                            </Link>
                         </Button>
                         <Button variant="secondary" className="lg:h-10 lg:text-lg lg:px-6">
-                            Hire&nbsp;Me
+                            <Link href="http://wa.me/+6285770253105">
+                                Hire&nbsp;Me
+                            </Link>
                         </Button>
                     </motion.div>
 
@@ -181,7 +185,7 @@ export default function HeroSection() {
                             {["facebook", "youtube", "instagram", "twitter", "tiktok"].map((platform) => {
                                 const Icon = icons[platform as keyof typeof icons]
                                 return (
-                                    <Link key={platform} href={`https://${platform}.com`} target="_blank" rel="noopener noreferrer">
+                                    <Link key={platform} href={`https://${platform}.com/jie.env`} target="_blank" rel="noopener noreferrer">
                                         <Icon className="text-text dark:text-dark-text w-8 h-8 hover:opacity-80 transition" />
                                     </Link>
                                 )

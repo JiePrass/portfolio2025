@@ -96,3 +96,7 @@
   --color-dark-accent-800: #A5A5E0;
   --color-dark-accent-900: #D0D0F1;
 }
+
+html {
+  scroll-behavior: smooth;
+}

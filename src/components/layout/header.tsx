@@ -139,7 +139,7 @@ export default function Header() {
                         <div className="flex gap-4 items-center">
                             <DarkModeToggle />
                             <Button variant="secondary" asChild className="hidden lg:block">
-                                <Link href="#">Contact</Link>
+                                <Link href="http://wa.me/+6285770253105">Contact</Link>
                             </Button>
 
                             {/* Hamburger */}

@@ -85,13 +85,13 @@ export default function About() {
                     {/* Contact Info */}
                     <div className="md:flex gap-4 hidden my-6">
                         <Button asChild>
-                            <Link href="/">
+                            <Link href="http://wa.me/+6285770253105">
                                 <FaPhone size={16} />
                                 (+62) 857-7025-3105
                             </Link>
                         </Button>
                         <Button asChild>
-                            <Link href="/">
+                            <Link href="#faq">
                                 <MdEmail size={16} />
                                 renjieprass@gmail.com
                             </Link>

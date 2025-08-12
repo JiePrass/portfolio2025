@@ -109,7 +109,7 @@ export default function Footer() {
                             {["facebook", "youtube", "instagram", "twitter", "tiktok"].map((platform) => {
                                 const Icon = icons[platform as keyof typeof icons]
                                 return (
-                                    <Link key={platform} href={`https://${platform}.com`} target="_blank" rel="noopener noreferrer">
+                                    <Link key={platform} href={`https://${platform}.com/jie.env`} target="_blank" rel="noopener noreferrer">
                                         <Icon className="text-text dark:text-dark-text w-8 h-8 hover:opacity-80 transition" />
                                     </Link>
                                 )

@@ -56,7 +56,7 @@ const projects: Project[] = [
 
 export default function Projects() {
     return (
-        <section className="container mx-auto py-12 lg:py-20 px-6">
+        <section className="container mx-auto py-12 lg:py-20 px-6" id="projects">
             {/* ─── Heading ─── */}
             <div className="flex items-center mb-3">
                 <span className="w-4 h-[2px] bg-dark-primary rounded-full mr-2" />
