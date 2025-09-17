@@ -22,6 +22,11 @@ const sfPro = localFont({
 export const metadata: Metadata = {
   title: "JiePrass",
   description: "Fullstack Developer & UI/UX Designer",
+  icons: {
+    icon: "/icons/jplogo-main.svg",
+    shortcut: "/icons/jplogo-main.svg",
+    apple: "/icons/jplogo-main.svg",
+  },
 };
 
 export default function RootLayout({
