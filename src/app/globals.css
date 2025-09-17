@@ -97,6 +97,14 @@
   --color-dark-accent-900: #D0D0F1;
 }
 
-html {
+@layer utilities {
+  .font-sfpro {
+    font-family: var(--font-sfpro);
+  }
+}
+
+html,
+body {
+  font-family: var(--font-sfpro), sans-serif;
   scroll-behavior: smooth;
 }

@@ -41,13 +41,20 @@ export default function Footer() {
                 className="container mx-auto px-6 md:px-0 flex flex-col md:flex-row md:justify-between md:items-center gap-6"
 
             >
-                <div className="flex items-center">
+                <div className="flex items-center gap-1">
                     <Image
-                        src="/images/HFE_Logo.png"
-                        alt="Logo"
+                        src="/icons/jplogo.svg"
+                        alt="JiePrass Studio"
                         width={300}
                         height={300}
-                        className="object-contain w-auto h-8 md:w-8 md:h-auto"
+                        className="object-contain hidden dark:block w-auto h-8 md:w-8 md:h-auto"
+                    />
+                    <Image
+                        src="/icons/jplogo-main.svg"
+                        alt="JiePrass Studio"
+                        width={300}
+                        height={300}
+                        className="object-contain dark:hidden w-auto h-8 md:w-8 md:h-auto"
                     />
                     <span className="text-xl font-bold">JiePrass</span>
                 </div>

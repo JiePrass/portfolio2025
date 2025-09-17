@@ -168,8 +168,9 @@ export default function HeroSection() {
                             <span className="px-4 py-2 rounded-full text-xs font-medium text-white bg-secondary">
                                 Mobile&nbsp;App&nbsp;Design
                             </span>
-                            <span className="px-4 py-2 rounded-full text-xs font-medium text-white bg-primary">
-                            </span>
+                            <div className="rounded-full aspect-square w-8 h-8 flex justify-center bg-primary">
+                                <Image src="/icons/jplogo.svg" alt="JiePrass Studio" width={16} height={16} />
+                            </div>
                             <span className="px-4 py-2 rounded-full text-xs font-medium text-white bg-primary">
                                 Fullstack&nbsp;Developer
                             </span>

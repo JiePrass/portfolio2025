@@ -37,7 +37,6 @@ const navItems = [
     { id: "services", label: "Services", icon: Wrench },
     { id: "about", label: "About", icon: Info },
     { id: "projects", label: "Projects", icon: Folder },
-    { id: "resume", label: "Resume", icon: FileText },
 ] as const;
 
 type NavItem = (typeof navItems)[number];
@@ -133,6 +132,13 @@ export default function Header() {
                                     {label}
                                 </Link>
                             ))}
+                            <Link
+                                href="/CV.pdf"
+                                download="RenjieSyarbainiPrasetya-CV.pdf"
+                                className={linkClass("resume")}
+                            >
+                                Resume
+                            </Link>
                         </nav>
 
                         {/* Toggle & Contact */}
@@ -207,6 +213,14 @@ export default function Header() {
                                                 {label}
                                             </Link>
                                         ))}
+                                        <Link
+                                            href="/CV.pdf"
+                                            download="RenjieSyarbainiPrasetya-CV.pdf"
+                                            className={`${linkClass("resume")} flex items-center gap-3`}
+                                        >
+                                            <FileText size={18} className="shrink-0" />
+                                            Resume
+                                        </Link>
                                     </nav>
                                 </div>
 
